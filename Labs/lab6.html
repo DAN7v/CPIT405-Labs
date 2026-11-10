@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6</title>
+    <style>
+        body {
+            font-family: "Times New Roman",Times ,serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button, input {
+            font-family: inherit;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+        }
+
+        #likeBtn {
+            background-color: green;
+        }
+
+        #dislikeBtn {
+            background-color: red;
+        }
+
+        #submitBtn {
+            background-color: blue;
+        }
+
+        #likeBtn:disabled:not(.chosen),
+        #dislikeBtn:disabled:not(.chosen),
+        #submitBtn:disabled {
+            background-color: #aaa;
+        }
+
+        #resetBtn {
+            background-color: gray;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #comments {
+            padding-left: 20px;
+        }
+
+        #comments li {
+            margin-bottom: 5px;
+        }
+
+        #message {
+            text-align: center;
+            color: green;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Like or Dislike</h1>
+
+        <div class="buttons">
+            <button id="likeBtn">Like 👍<span id="likeCount">0</span></button>
+            <button id="dislikeBtn">Dislike 👎<span id="dislikeCount">0</span></button>
+        </div>
+
+        <input type="text" id="commentInput" placeholder="Write a comment">
+        <button id="submitBtn">Submit</button>
+
+        <h3>Comments</h3>
+        <ul id="comments"></ul>
+
+        <button id="resetBtn">Reset</button>
+        <p id="message"></p>
+    </div>
+
+    <script src="lab6.js"></script>
+</body>
+</html>
